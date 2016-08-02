@@ -1,2 +1,4 @@
-# Pitch-Perfect
-Project 1: Udacity iOS Nanodegree
+# Pitch Perfect
+
+#### Udacity iOS Developer Nanodegree: Project 1
+
