@@ -29,7 +29,6 @@ class PlaySoundsViewController: UIViewController {
         case Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb
     }
     
-    
     @IBAction func playSoundForButton(sender: UIButton) {
         switch (ButtonType(rawValue: sender.tag)!) {
         case .Slow:
