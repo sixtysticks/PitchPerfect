@@ -16,11 +16,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var stopRecordingButton: UIButton!
     
     var audioRecorder: AVAudioRecorder!
+    
+    var isRecording: Bool! {
+        didSet {
+            stopRecordingButton.enabled = isRecording
+            recordingButton.enabled = !isRecording
+            recordingLabel.text = isRecording! ? "Recording in Progress" : "Tap to Record"
+            recordingLabel.textColor = isRecording! ? ppSecondaryColor : UIColor.whiteColor()
+        }
+    }
 
     @IBAction func recordAudio(sender: UIButton) {
-        recordingButton.enabled = false
-        stopRecordingButton.enabled = true
-        recordingLabel.text = "Recording in Progress"
+        isRecording = true
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -39,9 +46,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(sender: UIButton) {
-        stopRecordingButton.enabled = false
-        recordingButton.enabled = true
-        recordingLabel.text = "Tap to Record"
+        isRecording = false
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -68,16 +73,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.pitchPerfectPrimaryColor()
+        self.view.backgroundColor = ppPrimaryColor
         
         let navBar = self.navigationController?.navigationBar
-        
         navBar!.translucent = false
         navBar!.setBackgroundImage(UIImage(), forBarPosition: .Any, barMetrics: .Default)
         navBar!.shadowImage = UIImage()
         navBar!.barTintColor = UIColor.whiteColor()
-        navBar!.tintColor = UIColor.pitchPerfectPrimaryColor()
-        navBar!.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.pitchPerfectPrimaryColor()]
+        navBar!.tintColor = ppPrimaryColor
+        navBar!.titleTextAttributes = [NSForegroundColorAttributeName: ppPrimaryColor]
     }
     
     override func didReceiveMemoryWarning() {

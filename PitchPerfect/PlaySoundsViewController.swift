@@ -55,7 +55,7 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.pitchPerfectPrimaryColor()
+        self.view.backgroundColor = ppPrimaryColor
         setupAudio()
     }
     

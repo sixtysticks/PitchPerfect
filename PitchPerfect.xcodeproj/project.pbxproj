@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2633C8211D4E92BC00AAC7B7 /* UIColor+PPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C8201D4E92BC00AAC7B7 /* UIColor+PPColor.swift */; };
+		2649BDE21D5686F100D4A4EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649BDE11D5686F100D4A4EB /* Constants.swift */; };
 		264A1C041D4AB85300B86179 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264A1C021D4AB85200B86179 /* PlaySoundsViewController.swift */; };
 		269AEBE11D4C0342001E99F8 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269AEBE01D4C0342001E99F8 /* PlaySoundsViewController+Audio.swift */; };
 		26EC77BF1D49563E00D2E7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC77BE1D49563E00D2E7CF /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		2633C8201D4E92BC00AAC7B7 /* UIColor+PPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+PPColor.swift"; sourceTree = "<group>"; };
+		2649BDE11D5686F100D4A4EB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		264A1C021D4AB85200B86179 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		269AEBE01D4C0342001E99F8 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 		26EC77BB1D49563E00D2E7CF /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2649BDE01D5686D300D4A4EB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2649BDE11D5686F100D4A4EB /* Constants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		26EC77B21D49563E00D2E7CF = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		26EC77BD1D49563E00D2E7CF /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				2649BDE01D5686D300D4A4EB /* Constants */,
 				26EC77BE1D49563E00D2E7CF /* AppDelegate.swift */,
 				26EC77C01D49563E00D2E7CF /* RecordSoundsViewController.swift */,
 				264A1C021D4AB85200B86179 /* PlaySoundsViewController.swift */,
@@ -278,6 +289,7 @@
 				269AEBE11D4C0342001E99F8 /* PlaySoundsViewController+Audio.swift in Sources */,
 				264A1C041D4AB85300B86179 /* PlaySoundsViewController.swift in Sources */,
 				26EC77BF1D49563E00D2E7CF /* AppDelegate.swift in Sources */,
+				2649BDE21D5686F100D4A4EB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

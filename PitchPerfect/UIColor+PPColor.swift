@@ -9,13 +9,10 @@
 import UIKit
 
 public extension UIColor {
-    public static func pitchPerfectPrimaryColor() -> UIColor {
-        let ppColor = UIColor(red: 6.0/255, green: 99/255, blue: 140/255, alpha: 1.0)
-        return ppColor
-    }
     
-    public static func pitchPerfectSecondaryColor() -> UIColor {
-        let ppSecondaryColor = UIColor(red: 130/255.0, green: 177/255.0, blue: 197/255.0, alpha: 1.0)
-        return ppSecondaryColor
+    public static func pitchPerfectColour(red r: CGFloat, green g: CGFloat, blue b: CGFloat) -> UIColor {
+        let color = UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1.0)
+        return color
     }
+
 }
