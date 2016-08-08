@@ -84,10 +84,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         navBar!.titleTextAttributes = [NSForegroundColorAttributeName: ppPrimaryColor]
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     override func viewWillAppear(animated: Bool) {
         stopRecordingButton.enabled = false
     }
