@@ -10,14 +10,21 @@ import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    // MARK: Outlets
 
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
+    // MARK: Instance Variables
+    
     var audioRecorder: AVAudioRecorder!
     
+    // MARK: Computed Properties
+    
     var isRecording: Bool! {
+        // The following is known as a 'property observer'
         didSet {
             stopRecordingButton.enabled = isRecording
             recordingButton.enabled = !isRecording
@@ -25,7 +32,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             recordingLabel.textColor = isRecording! ? ppSecondaryColor : UIColor.whiteColor()
         }
     }
-
+    
+    //MARK: Custom Methods
+    
     @IBAction func recordAudio(sender: UIButton) {
         isRecording = true
         
@@ -62,6 +71,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    // MARK: Overrides
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "stopRecording") {
             let playSoundsVC = segue.destinationViewController as! PlaySoundsViewController
@@ -88,4 +99,3 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopRecordingButton.enabled = false
     }
 }
-
